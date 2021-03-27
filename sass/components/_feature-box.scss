@@ -7,8 +7,8 @@
   box-shadow: 0 1.5rem 4rem rgba($color-black, 0.15);
   transition: transform 0.3s;
 
-  @include respond(tab-port) {
-    paddind: 2rem;
+  @include respond(tiny) {
+    padding: 5rem 2rem;
   }
 
   &__icon {

@@ -24,7 +24,7 @@
       width: 100%;
     }
 
-    &::-webkit-input-placeholder {
+    &::placeholder {
       color: $color-gray-dark-2;
     }
 

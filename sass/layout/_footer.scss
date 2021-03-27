@@ -17,19 +17,31 @@
     }
   }
 
+  &__container {
+    display: flex;
+    justify-content: space-between;
+
+    @include respond(tab-land) {
+      flex-direction: column;
+    }
+  }
+
   &__navigation {
     border-top: 1px solid $color-gray-dark;
     padding-top: 2rem;
-    display: inline-block;
+    flex: 0 0 45%;
 
-    @include respond(tab-port) {
-      width: 100%;
-      text-align: center;
+    @include respond(tab-land) {
+      flex: 0 0 80%;
+      margin-bottom: 5rem;
     }
   }
 
   &__list {
     list-style-type: none;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
   }
 
   &__item {
@@ -45,7 +57,6 @@
     background-color: $color-gray-dark-3;
     text-decoration: none;
     text-transform: uppercase;
-    display: inline-block;
     transition: all 0.2s ease;
 
     &:hover,
@@ -58,14 +69,10 @@
   &__copyright {
     border-top: 1px solid $color-gray-dark;
     padding-top: 2rem;
-    // display: inline-block;
-    width: 80%;
-    float: right;
+    flex: 0 0 45%;
 
     @include respond(tab-port) {
-      width: 100%;
-      text-align: center;
-      float: none;
+      flex: 0 0 80%;
     }
   }
 }

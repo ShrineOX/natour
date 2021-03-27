@@ -1,21 +1,24 @@
 .story {
   width: 75%;
+  max-width: 114rem;
   margin: 0 auto;
   border-radius: 3px;
   box-shadow: 0 3rem 6rem rgba($color-black, 0.15);
   background-color: rgba($color-white, 0.6);
   padding: 6rem;
   padding-left: 9rem;
-  transform: skewX(-10deg);
-
-  @include respond(tab-port) {
-    width: 100%;
-    padding: 4rem;
-    padding-left: 7rem;
-  }
+  transform: skewX(-12deg);
+  position: relative;
 
   @include respond(phone) {
     transform: skewX(0deg);
+    display: flex;
+    flex-direction: column;
+    padding: 5rem;
+  }
+
+  @include respond(tiny) {
+    padding: 2rem;
   }
 
   &__shape {
@@ -31,22 +34,46 @@
 
     @include respond(phone) {
       transform: translateX(-3rem) skewX(0deg);
+      width: 100%;
+      height: 15rem;
+
+      clip-path: none;
+      transform: none;
+      float: none;
+      position: absolute;
+      top: 0;
+      left: 0;
     }
   }
 
   &__img {
     height: 100%;
     transition: all 0.3s;
-    // transform: scale(1.4) translateX(-4rem);
     transform: scale(1.3) translateX(-3rem);
-    // backface-visibility: hidden;
+
+    @include respond(phone) {
+      transform: none;
+      width: 100%;
+      object-fit: cover;
+      border-radius: 3px;
+    }
   }
 
   &__text {
-    transform: skewX(10deg);
+    transform: skewX(12deg);
+
+    p {
+      display: -webkit-box;
+      -webkit-line-clamp: 4;
+      -webkit-box-orient: vertical;
+      // text-overflow: ellipsis;
+      // white-space: nowrap;
+      overflow: hidden;
+    }
 
     @include respond(phone) {
       transform: skewX(0deg);
+      padding-top: 15rem;
     }
   }
 
@@ -66,10 +93,15 @@
   &:hover &__img {
     transform: scale(1) translateX(-4.5rem);
     filter: blur(2px) brightness(0.6);
+
+    @include respond(phone) {
+      transform: none;
+      filter: blur(1px) brightness(0.6);
+    }
   }
 
   &:hover &__caption {
     opacity: 1;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -30%);
   }
 }

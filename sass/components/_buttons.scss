@@ -54,15 +54,6 @@
     }
   }
 
-  &--red {
-    background-color: $color-orangered;
-    color: $color-white;
-
-    &::after {
-      background-color: $color-orangered;
-    }
-  }
-
   &--green {
     color: $color-white;
     background-color: $color-primary-dark;

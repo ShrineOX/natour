@@ -24,8 +24,9 @@ $color-black: #000;
 // FONT
 $default-font-size: 1.6rem;
 
-// GRID
-$grid-width: 114rem;
-$gutter-vertical: 6rem;
-$gutter-vertical-small: 4rem;
-$gutter-horizontal: 6rem;
+// BREAKPOINT RESPONSIVE
+$bp-largest: 75em;
+$bp-large: 75em;
+$bp-medium: 75em;
+$bp-small: 75em;
+$bp-smallest: 75em;
