@@ -5,6 +5,10 @@
   height: 53rem;
   width: 33rem;
 
+  @include respond(phone) {
+    width: 90vw;
+  }
+
   &__side {
     height: 100%;
     width: 100%;

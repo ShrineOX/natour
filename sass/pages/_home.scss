@@ -27,7 +27,6 @@
     }
   }
   @include respond(tab-port) {
-    padding: 20rem 0;
     &__container {
       flex-direction: column;
       align-items: center;
