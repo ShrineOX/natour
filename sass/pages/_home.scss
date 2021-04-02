@@ -54,7 +54,7 @@
 
   &__container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, 30rem);
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
     justify-content: center;
     column-gap: 3vw;
     row-gap: 3rem;
@@ -70,8 +70,9 @@
   margin-top: -10rem;
 
   &__container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(35rem, 45rem));
+    display: flex;
+    flex: 1;
+    flex-wrap: wrap;
     column-gap: 3vw;
     row-gap: 3rem;
     justify-content: center;
